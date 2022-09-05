@@ -1,0 +1,120 @@
+.hero{
+    min-height: calc(100vh - 95px);
+    background-color: #1ABC9C;
+    padding: 50px 0;
+    .hero-infos{
+        color: rgb(236, 236, 236);
+        h3{
+            font-size:25px;
+            font-weight: 600;
+            text-transform: capitalize;
+            background: #16A085;
+            max-width: fit-content;
+            padding: 10px;
+            border-right: 2px solid rgb(236, 236, 236);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: width 2s linear 1;
+            @keyframes width{
+                from{
+                    width: 0px;
+                }to{
+                    width:400px;
+                }
+            }
+        }
+        h1{
+            font-size: calc(2vw + 2.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .4rem;
+            line-height: 1;
+            margin: 20px 0;
+            white-space: wrap;
+        }
+        a{
+            background-color: #fff;
+            color: #000;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            display: block;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+            padding: 10px 30px;
+            width: 200px;
+            span{
+                transform: translateX(0px);
+                display: inline-block;
+                transition: .3s;
+            }
+            &::after{
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%) translateX(-100px);
+                transition: .3s;
+            }
+            &:hover{
+                &::after{
+                    transform: translateX(-50%) translateY(-50%);
+                    left: 50%;
+                }
+                span{
+                    transform: translateX(150px);
+                }
+            }
+        }
+    }
+   .hero-img{
+        .img{
+        width: 500px;
+        height: 100%;
+        margin: auto;
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        box-shadow: 0 0 30px 1px #16A085;
+        @media (max-width:720px) {
+            width: 100%;
+        }
+        img{
+            clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+            background-color: #16A085;
+            width: 100%;
+            animation: move 5s linear infinite both;
+            @keyframes move {
+                0%,100%{
+                    transform: translateY(-20px);
+                }
+                50%{
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    .social-links{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        a{
+            background-color: #fff;
+            color: #1ABC9C;
+            margin: 0 7px;
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: .5s;
+            &:hover{
+                background-color: #16A085;
+                color: #fff;
+            }
+        }
+    }
+   }
+}
