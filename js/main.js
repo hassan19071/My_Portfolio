@@ -21,7 +21,6 @@ window.addEventListener("scroll",()=>{
     let val = 850 - window.scrollY +"px";
     heroSection.style.clipPath = `circle(${val} at center center)`;
     localStorage.setItem("scrollYVal",window.scrollY);
-    console.log(val);
 })
 
 // window.addEventListener("load",()=>{
@@ -86,3 +85,39 @@ function skills(){
 }
 
 skills();
+
+// change between types;
+
+let typesBtn = document.querySelectorAll(".portfolio .types span");
+let projects = document.querySelectorAll(".portfolio .my-pros > div");
+
+
+typesBtn.forEach((type)=>{
+    type.addEventListener("click",()=>{
+        typesBtn.forEach((ty)=>{
+            ty.classList.remove("active");
+        })
+        type.classList.add("active");
+        projects.forEach((pro)=>{
+            if (type.innerHTML == "All"){
+                pro.classList.remove("close");
+            }else{
+                if (pro.getAttribute("data-type") == type.innerHTML){
+                    pro.classList.remove("close");
+                }else{
+                    pro.classList.add("close")
+                }
+            }
+        })
+    })
+})
+
+
+let homeBtn = document.querySelector(".to-top");
+
+homeBtn.addEventListener("click",()=>{
+    scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+})
