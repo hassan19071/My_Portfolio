@@ -23,12 +23,6 @@ window.addEventListener("scroll",()=>{
     localStorage.setItem("scrollYVal",window.scrollY);
 })
 
-// window.addEventListener("load",()=>{
-//    window.scrollTo({
-//     top:0,
-//     behavior:"smooth"
-//    })
-// })
 
 const arrowDown = document.querySelector(".arrow");
 
@@ -120,4 +114,11 @@ homeBtn.addEventListener("click",()=>{
         top:0,
         behavior:"smooth"
     })
+})
+
+
+let laoding = document.querySelector(".overlay")
+
+window.addEventListener("load",()=>{
+    laoding.style.display = "none";
 })

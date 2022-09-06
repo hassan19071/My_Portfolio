@@ -591,4 +591,42 @@ a {
   color: #999;
   margin-top: 100px;
   font-size: 18px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  left: 0;
+  background-color: #181715;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay .circle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #987750;
+  border-right: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: rotate 0.7s linear infinite;
+          animation: rotate 0.7s linear infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
