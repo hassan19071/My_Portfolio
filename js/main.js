@@ -117,8 +117,9 @@ homeBtn.addEventListener("click",()=>{
 })
 
 
-let laoding = document.querySelector(".overlay")
+let laoding = document.querySelector(".overlay");
 
 window.addEventListener("load",()=>{
     laoding.style.display = "none";
+    document.body.classList.remove("loading");
 })

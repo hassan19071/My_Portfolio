@@ -5,6 +5,10 @@ body {
   font-family: "Jost", sans-serif;
   overflow-x: hidden;
 }
+body.loading {
+  overflow-y: hidden;
+  height: 100vh;
+}
 @media (max-width: 991px) {
   body {
     font-size: 18px;
@@ -606,8 +610,8 @@ a {
   justify-content: center;
 }
 .overlay .circle {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   border: 2px solid #987750;
   border-right: 2px solid transparent;
   border-radius: 50%;

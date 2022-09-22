@@ -4,6 +4,10 @@ body{
     font-size: 25px;
     font-family: 'Jost', sans-serif;
     overflow-x: hidden;
+    &.loading{
+        overflow-y: hidden;
+        height: 100vh;
+    }
     @media (max-width:991px) {
         font-size: 18px;
     }
@@ -585,8 +589,8 @@ a{
     align-items: center;
     justify-content: center;
     .circle{
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
         border: 2px solid #987750;
         border-right: 2px solid transparent;
         border-radius: 50%;
