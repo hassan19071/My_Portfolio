@@ -50,10 +50,15 @@ a {
   transition: 0.4s;
 }
 .menu.scroll {
-  background-color: rgba(0, 0, 0, 0.7647058824);
+  background-color: #1d1b19;
+  box-shadow: #987750 0px 0px 1.5px 0px;
 }
 .menu i {
   cursor: pointer;
+  transition: 0.2s;
+}
+.menu i:hover {
+  color: #987750;
 }
 
 .side-layout {
@@ -396,7 +401,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .about .infos .cv a:hover {
   color: #987750;
@@ -432,6 +437,10 @@ a {
 .skills .all-skills .skill {
   margin-top: 50px;
   text-align: center;
+}
+.skills .all-skills .skill p {
+  font-size: 13px;
+  text-transform: uppercase;
 }
 .skills .all-skills .skill img {
   width: 40%;

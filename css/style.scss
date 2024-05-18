@@ -42,12 +42,17 @@ a {
   top: 0px;
   font-size: 30px;
   &.scroll {
-    background-color: #000000c3;
+    background-color: #1d1b19;
+    box-shadow: #987750 0px 0px 1.5px 0px;
   }
   width: 100%;
   transition: 0.4s;
   i {
     cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      color: #987750;
+    }
   }
 }
 .side-layout {
@@ -385,7 +390,7 @@ a {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        transition: 0.5s;
+        transition: 0.2s;
         &:hover {
           color: #987750;
           border-color: #987750;
@@ -425,6 +430,10 @@ a {
     .skill {
       margin-top: 50px;
       text-align: center;
+      p {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
       img {
         width: 40%;
         filter: grayscale(80%);
